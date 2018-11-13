@@ -8,7 +8,7 @@ $(document).ready(function() {
         var grammar = tracery.createGrammar(grammars[name]);
         $("#grammar").html(grammar.toText());
 
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 3; i++) {
 
             var s = grammar.flatten("#origin#");
             console.log(s);
@@ -20,15 +20,10 @@ $(document).ready(function() {
             $("#output").append(div);
 
         }
-
     }
 
     setTimeout(function() {
         loadGrammar("scifi");
 
     }, 10);
-
-    $('#grammarSelect').on('change', function() {
-        loadGrammar(this.value);
-    });
 });
